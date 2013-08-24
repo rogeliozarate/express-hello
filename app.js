@@ -2,8 +2,8 @@ var express = require('express');
 var app = express();
 
 app.get('/', function(req,res){
-  var body = 'Hello world'
-  res.setHeader('Content-Type','text/plain');
+  var body = '<!DOCTYPE html><html><head><title>Hello world node-express</title></head><body><h1>Hello world!</h1></body>'
+  res.setHeader('Content-Type','text/html');
   res.setHeader('Content-Length', body.length);
   res.end(body);
  }
