@@ -12,6 +12,7 @@ app.get('/', function(req,res){
 app.use(function(err, req, res, next){
   console.error(err.stack);
   res.send(500, 'Houston, We have a problem!');
+  res.render('error', { error: err });
   }
 );
 
