@@ -9,5 +9,11 @@ app.get('/', function(req,res){
  }
 );
 
+app.use(function(err, req, res, next){
+  console.error(err.stack);
+  res.send(500, 'Houston, We have a problem!');
+  }
+);
+
 app.listen(3000);
 console.log('Listening on port 3000');
